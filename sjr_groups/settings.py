@@ -28,6 +28,14 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1', cast=lambda v: [h.strip() for h in v.split(',') if h.strip()])
 
+# Railway (and similar PaaS) terminate TLS at a proxy and forward plain HTTP,
+# so Django needs to be told the original request was HTTPS — otherwise CSRF
+# validation (admin login, the enquiry form) fails on the deployed domain.
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+CSRF_TRUSTED_ORIGINS = [
+    f'https://{host}' for host in ALLOWED_HOSTS if host not in ('localhost', '127.0.0.1')
+]
+
 
 # Application definition
 

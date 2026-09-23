@@ -1,0 +1,915 @@
+[
+{
+  "model": "about.about",
+  "pk": 1,
+  "fields": {
+    "eyebrow_text": "About SJR Groups",
+    "heading": "Building businesses.\nCreating experiences.",
+    "description_primary": "SJR Groups is a diversified business group bringing together distinctive experiences across fashion, engineering guidance, traditional Snacks, fitness and recreation.",
+    "description_secondary": "Each business has its own purpose and personality, united by a shared commitment to quality, trust and meaningful customer experiences.",
+    "updated_at": "2026-09-23T02:44:25.071Z"
+  }
+},
+{
+  "model": "about.aboutstat",
+  "pk": 1,
+  "fields": {
+    "about": 1,
+    "label": "Four Businesses",
+    "order": 1
+  }
+},
+{
+  "model": "about.aboutstat",
+  "pk": 2,
+  "fields": {
+    "about": 1,
+    "label": "One Group",
+    "order": 2
+  }
+},
+{
+  "model": "about.aboutstat",
+  "pk": 3,
+  "fields": {
+    "about": 1,
+    "label": "One Shared Vision",
+    "order": 3
+  }
+},
+{
+  "model": "business.business",
+  "pk": 1,
+  "fields": {
+    "eyebrow_text": "Our Businesses",
+    "heading": "Four brands. One identity.",
+    "updated_at": "2026-09-23T05:04:58.636Z"
+  }
+},
+{
+  "model": "business.businessitem",
+  "pk": 1,
+  "fields": {
+    "business": 1,
+    "image": "business/hero-1_mecz9ZJ.png",
+    "title": "Fashion Shelter / Covering Jewellery",
+    "tagline": "Style That Shines.",
+    "description": "Explore elegant covering jewellery designed to add timeless style and confidence to every occasion.",
+    "features": "Trendy Collections\r\nAffordable Pricing\r\nTarnish-Free & Durable\r\nDesigns for Every Occasion",
+    "cta_text": "Explore on Fashion Shelter",
+    "cta_link": "",
+    "accent_color": "#8B4A2B",
+    "order": 1
+  }
+},
+{
+  "model": "business.businessitem",
+  "pk": 2,
+  "fields": {
+    "business": 1,
+    "image": "business/hero2.png",
+    "title": "Sirippu Mittai / Traditional Snacks & Fun Candies",
+    "tagline": "Taste of Tradition.",
+    "description": "Bringing traditional snacks and fun candies together to create familiar flavours and joyful moments.",
+    "features": "Traditional Snacks\r\nAuthentic Taste\r\nQuality Products\r\nFun Candies\r\nTraditional snacks Gift Bag",
+    "cta_text": "Explore on Sirippu Mittai",
+    "cta_link": "",
+    "accent_color": "#C0622C",
+    "order": 2
+  }
+},
+{
+  "model": "business.businessitem",
+  "pk": 3,
+  "fields": {
+    "business": 1,
+    "image": "business/hero3.png",
+    "title": "Om Muruga Ground / Fitness Centre & Games",
+    "tagline": "Move. Play. Stay Fit.",
+    "description": "A vibrant space for fitness, sports and recreational activities designed for an active lifestyle.",
+    "features": "Gym\r\nTable Tennis\r\nZapminton\r\nBadminton\r\nBasketball\r\nFitness Training",
+    "cta_text": "Explore on Muruga Ground",
+    "cta_link": "",
+    "accent_color": "#2F6B3A",
+    "order": 3
+  }
+},
+{
+  "model": "business.businessitem",
+  "pk": 4,
+  "fields": {
+    "business": 1,
+    "image": "business/hero4.png",
+    "title": "Mano Innovation Club / Consultancy Services",
+    "tagline": "Engineering Ideas into Impact.",
+    "description": "Empowering students, creators and entrepreneurs with engineering guidance, and business startup mentorship.",
+    "features": "Engineering Projects\r\nGuidance on Starting Business\r\nPatent Filing\r\nMotivational Programs for Students",
+    "cta_text": "Explore on Mano Innovation Club",
+    "cta_link": "",
+    "accent_color": "#1B3A5C",
+    "order": 4
+  }
+},
+{
+  "model": "contact.contact",
+  "pk": 1,
+  "fields": {
+    "eyebrow_text": "Contact SJR Groups",
+    "heading": "Let's connect.",
+    "description": "Tell us which business you are interested in and the right team can respond once official contact channels are connected.",
+    "map_embed_url": "https://www.google.com/maps?q=434D/5%2C%20Poornammal%20Colony%2C%20Kadalaiyur%20Road%2C%20Kovilpatti%20-%20628501&output=embed",
+    "map_link": "https://maps.app.goo.gl/be8vfUZGxmoEjhXPA",
+    "location_label": "Kovilpatti",
+    "updated_at": "2026-09-23T02:44:25.478Z"
+  }
+},
+{
+  "model": "contact.contactmethod",
+  "pk": 1,
+  "fields": {
+    "contact": 1,
+    "label": "Call",
+    "value": "+91 95003 09796",
+    "order": 1
+  }
+},
+{
+  "model": "contact.contactmethod",
+  "pk": 2,
+  "fields": {
+    "contact": 1,
+    "label": "WhatsApp",
+    "value": "+91 95003 09796",
+    "order": 2
+  }
+},
+{
+  "model": "contact.contactmethod",
+  "pk": 3,
+  "fields": {
+    "contact": 1,
+    "label": "Email",
+    "value": "sjrgropuskovilpatti@gmail.com",
+    "order": 3
+  }
+},
+{
+  "model": "cta_banner.ctabanner",
+  "pk": 1,
+  "fields": {
+    "eyebrow_text": "Fashion · Tradition · Fitness",
+    "heading": "Discover the world of SJR Groups.",
+    "cta_text": "Explore Our Businesses",
+    "cta_link": "#businesses",
+    "updated_at": "2026-09-23T02:44:25.495Z"
+  }
+},
+{
+  "model": "faq.faq",
+  "pk": 1,
+  "fields": {
+    "eyebrow_text": "Questions, Answered",
+    "heading": "Everything you need to know.",
+    "updated_at": "2026-09-23T02:44:25.448Z"
+  }
+},
+{
+  "model": "faq.faqitem",
+  "pk": 1,
+  "fields": {
+    "faq": 1,
+    "question": "What businesses are part of SJR Groups?",
+    "answer": "SJR Groups brings together Fashion Shelter, Sirippu Mittai and Om Muruga Ground.",
+    "order": 1
+  }
+},
+{
+  "model": "faq.faqitem",
+  "pk": 2,
+  "fields": {
+    "faq": 1,
+    "question": "Where are the SJR Groups businesses located?",
+    "answer": "Answer coming soon.",
+    "order": 2
+  }
+},
+{
+  "model": "faq.faqitem",
+  "pk": 3,
+  "fields": {
+    "faq": 1,
+    "question": "How can I contact a specific business?",
+    "answer": "Answer coming soon.",
+    "order": 3
+  }
+},
+{
+  "model": "faq.faqitem",
+  "pk": 4,
+  "fields": {
+    "faq": 1,
+    "question": "Does each business have its own social media page?",
+    "answer": "Answer coming soon.",
+    "order": 4
+  }
+},
+{
+  "model": "faq.faqitem",
+  "pk": 5,
+  "fields": {
+    "faq": 1,
+    "question": "Can I make an enquiry online?",
+    "answer": "Answer coming soon.",
+    "order": 5
+  }
+},
+{
+  "model": "faq.faqitem",
+  "pk": 6,
+  "fields": {
+    "faq": 1,
+    "question": "Where can I see the latest products and updates?",
+    "answer": "Answer coming soon.",
+    "order": 6
+  }
+},
+{
+  "model": "footer.footer",
+  "pk": 1,
+  "fields": {
+    "logo": "footer/sjr_groups_logo.png",
+    "brand_name": "SJR GROUPS",
+    "tagline": "One Vision · Endless Possibilities",
+    "description": "One Group. Four Unique Businesses.",
+    "phone": "+91 95003 09796",
+    "email": "sjrgropuskovilpatti@gmail.com",
+    "location": "434D/5, Poornammal Colony, Kadalaiyur Road, Kovilpatti - 628501",
+    "copyright_text": "© 2026 SJR Groups. All Rights Reserved.",
+    "updated_at": "2026-09-23T05:34:11.221Z"
+  }
+},
+{
+  "model": "footer.footerlink",
+  "pk": 1,
+  "fields": {
+    "footer": 1,
+    "column": "quick_links",
+    "label": "Home",
+    "url": "#home",
+    "order": 1
+  }
+},
+{
+  "model": "footer.footerlink",
+  "pk": 2,
+  "fields": {
+    "footer": 1,
+    "column": "quick_links",
+    "label": "About",
+    "url": "#about",
+    "order": 2
+  }
+},
+{
+  "model": "footer.footerlink",
+  "pk": 3,
+  "fields": {
+    "footer": 1,
+    "column": "quick_links",
+    "label": "Businesses",
+    "url": "#businesses",
+    "order": 3
+  }
+},
+{
+  "model": "footer.footerlink",
+  "pk": 4,
+  "fields": {
+    "footer": 1,
+    "column": "quick_links",
+    "label": "Gallery",
+    "url": "#gallery",
+    "order": 4
+  }
+},
+{
+  "model": "footer.footerlink",
+  "pk": 5,
+  "fields": {
+    "footer": 1,
+    "column": "quick_links",
+    "label": "Videos",
+    "url": "#videos",
+    "order": 5
+  }
+},
+{
+  "model": "footer.footerlink",
+  "pk": 6,
+  "fields": {
+    "footer": 1,
+    "column": "quick_links",
+    "label": "Reviews",
+    "url": "#reviews",
+    "order": 6
+  }
+},
+{
+  "model": "footer.footerlink",
+  "pk": 7,
+  "fields": {
+    "footer": 1,
+    "column": "quick_links",
+    "label": "FAQ",
+    "url": "#faq",
+    "order": 7
+  }
+},
+{
+  "model": "footer.footerlink",
+  "pk": 8,
+  "fields": {
+    "footer": 1,
+    "column": "quick_links",
+    "label": "Contact",
+    "url": "#contact",
+    "order": 8
+  }
+},
+{
+  "model": "footer.footerlink",
+  "pk": 9,
+  "fields": {
+    "footer": 1,
+    "column": "businesses",
+    "label": "Fashion Shelter",
+    "url": "",
+    "order": 1
+  }
+},
+{
+  "model": "footer.footerlink",
+  "pk": 10,
+  "fields": {
+    "footer": 1,
+    "column": "businesses",
+    "label": "Sirippu Mittai",
+    "url": "",
+    "order": 2
+  }
+},
+{
+  "model": "footer.footerlink",
+  "pk": 11,
+  "fields": {
+    "footer": 1,
+    "column": "businesses",
+    "label": "Om Muruga Ground",
+    "url": "",
+    "order": 3
+  }
+},
+{
+  "model": "footer.footerlink",
+  "pk": 12,
+  "fields": {
+    "footer": 1,
+    "column": "businesses",
+    "label": "Mano Innovation Club",
+    "url": "",
+    "order": 4
+  }
+},
+{
+  "model": "footer.footersociallink",
+  "pk": 1,
+  "fields": {
+    "footer": 1,
+    "platform": "Facebook",
+    "url": "https://www.facebook.com/share/19aKia55hb/",
+    "order": 1
+  }
+},
+{
+  "model": "footer.footersociallink",
+  "pk": 2,
+  "fields": {
+    "footer": 1,
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/sjrgroups_kovilpatti?stkn=MWx3bWxuenF5bHZpdA==",
+    "order": 2
+  }
+},
+{
+  "model": "footer.footersociallink",
+  "pk": 3,
+  "fields": {
+    "footer": 1,
+    "platform": "YouTube",
+    "url": "https://youtube.com/@book-king?si=Eeg7vgw_0Bba-q3g",
+    "order": 3
+  }
+},
+{
+  "model": "gallery.gallery",
+  "pk": 1,
+  "fields": {
+    "eyebrow_text": "Gallery",
+    "heading": "A glimpse into our world.",
+    "updated_at": "2026-09-23T05:22:10.685Z"
+  }
+},
+{
+  "model": "gallery.galleryimage",
+  "pk": 1,
+  "fields": {
+    "gallery": 1,
+    "image": "gallery/hero-1.png",
+    "category": "Fashion Shelter",
+    "order": 1
+  }
+},
+{
+  "model": "gallery.galleryimage",
+  "pk": 2,
+  "fields": {
+    "gallery": 1,
+    "image": "gallery/hero2.png",
+    "category": "Sirippu Mittai",
+    "order": 2
+  }
+},
+{
+  "model": "gallery.galleryimage",
+  "pk": 3,
+  "fields": {
+    "gallery": 1,
+    "image": "gallery/hero3.png",
+    "category": "Om Muruga Ground",
+    "order": 3
+  }
+},
+{
+  "model": "gallery.galleryimage",
+  "pk": 4,
+  "fields": {
+    "gallery": 1,
+    "image": "gallery/hero4.png",
+    "category": "Mano Innovation Club",
+    "order": 4
+  }
+},
+{
+  "model": "header_navigation.header",
+  "pk": 1,
+  "fields": {
+    "logo": "header/sjr_groups_logo.png",
+    "brand_name": "SJR GROUPS",
+    "tagline": "One Vision · Endless Possibilities",
+    "cta_text": "Connect With Us",
+    "cta_link": "#contact",
+    "updated_at": "2026-09-23T05:34:11.183Z"
+  }
+},
+{
+  "model": "header_navigation.navigationitem",
+  "pk": 1,
+  "fields": {
+    "header": 1,
+    "label": "Home",
+    "link": "#home",
+    "order": 0
+  }
+},
+{
+  "model": "header_navigation.navigationitem",
+  "pk": 2,
+  "fields": {
+    "header": 1,
+    "label": "About",
+    "link": "#about",
+    "order": 1
+  }
+},
+{
+  "model": "header_navigation.navigationitem",
+  "pk": 3,
+  "fields": {
+    "header": 1,
+    "label": "Businesses",
+    "link": "#businesses",
+    "order": 2
+  }
+},
+{
+  "model": "header_navigation.navigationitem",
+  "pk": 4,
+  "fields": {
+    "header": 1,
+    "label": "Videos",
+    "link": "#videos",
+    "order": 3
+  }
+},
+{
+  "model": "header_navigation.navigationitem",
+  "pk": 5,
+  "fields": {
+    "header": 1,
+    "label": "Gallery",
+    "link": "#gallery",
+    "order": 4
+  }
+},
+{
+  "model": "header_navigation.navigationitem",
+  "pk": 6,
+  "fields": {
+    "header": 1,
+    "label": "Reviews",
+    "link": "#reviews",
+    "order": 5
+  }
+},
+{
+  "model": "header_navigation.navigationitem",
+  "pk": 7,
+  "fields": {
+    "header": 1,
+    "label": "FAQ",
+    "link": "#faq",
+    "order": 6
+  }
+},
+{
+  "model": "header_navigation.navigationitem",
+  "pk": 8,
+  "fields": {
+    "header": 1,
+    "label": "Contact",
+    "link": "#contact",
+    "order": 7
+  }
+},
+{
+  "model": "hero.hero",
+  "pk": 1,
+  "fields": {
+    "badge_text": "One Vision · Four Businesses · Endless Possibilities",
+    "heading": "One group.\r\nFour unique businesses.",
+    "description": "Discover a diverse world of fashion, traditional taste, fitness and recreation — all under SJR Groups.",
+    "primary_cta_text": "Discover SJR Groups",
+    "primary_cta_link": "#about",
+    "secondary_cta_text": "Explore Our Businesses",
+    "secondary_cta_link": "#businesses",
+    "updated_at": "2026-09-23T05:03:46.466Z"
+  }
+},
+{
+  "model": "hero.heroslide",
+  "pk": 1,
+  "fields": {
+    "hero": 1,
+    "image": "hero/hero-1.png",
+    "order": 1
+  }
+},
+{
+  "model": "hero.heroslide",
+  "pk": 2,
+  "fields": {
+    "hero": 1,
+    "image": "hero/hero2.png",
+    "order": 2
+  }
+},
+{
+  "model": "hero.heroslide",
+  "pk": 3,
+  "fields": {
+    "hero": 1,
+    "image": "hero/hero3.png",
+    "order": 3
+  }
+},
+{
+  "model": "hero.heroslide",
+  "pk": 4,
+  "fields": {
+    "hero": 1,
+    "image": "hero/hero4.png",
+    "order": 4
+  }
+},
+{
+  "model": "reviews.reviews",
+  "pk": 1,
+  "fields": {
+    "eyebrow_text": "05 / Customer Stories",
+    "heading": "What our customers say.",
+    "updated_at": "2026-09-23T02:44:25.373Z"
+  }
+},
+{
+  "model": "reviews.review",
+  "pk": 2,
+  "fields": {
+    "reviews": 1,
+    "customer_name": "Karthik Subramaniam",
+    "business_location": "Fashion Shelter, Kovilpatti",
+    "quote": "The jewellery collection is elegant and the pricing is honest. Perfect for every occasion.",
+    "rating": 5,
+    "order": 1
+  }
+},
+{
+  "model": "reviews.review",
+  "pk": 3,
+  "fields": {
+    "reviews": 1,
+    "customer_name": "Lakshmi Narayanan",
+    "business_location": "Sirippu Mittai, Kovilpatti",
+    "quote": "Tastes exactly like my grandmother's homemade snacks. Truly authentic and fresh.",
+    "rating": 5,
+    "order": 2
+  }
+},
+{
+  "model": "reviews.review",
+  "pk": 4,
+  "fields": {
+    "reviews": 1,
+    "customer_name": "Arjun Krishnamoorthy",
+    "business_location": "Om Muruga Ground, Kovilpatti",
+    "quote": "Well-maintained fitness space with great equipment. My badminton evenings are the best part of the day now.",
+    "rating": 5,
+    "order": 3
+  }
+},
+{
+  "model": "reviews.review",
+  "pk": 5,
+  "fields": {
+    "reviews": 1,
+    "customer_name": "Meena Rajendran",
+    "business_location": "Fashion Shelter, Kovilpatti",
+    "quote": "Beautiful designs and excellent customer service. I keep coming back for every festive season.",
+    "rating": 5,
+    "order": 4
+  }
+},
+{
+  "model": "reviews.review",
+  "pk": 6,
+  "fields": {
+    "reviews": 1,
+    "customer_name": "Senthil Kumar",
+    "business_location": "Mano Innovation Club, Kovilpatti",
+    "quote": "The mentorship program helped me shape my first engineering project into a real product.",
+    "rating": 5,
+    "order": 5
+  }
+},
+{
+  "model": "reviews.review",
+  "pk": 7,
+  "fields": {
+    "reviews": 1,
+    "customer_name": "Priya Venkatesan",
+    "business_location": "Sirippu Mittai, Kovilpatti",
+    "quote": "Loved the traditional snacks gift bag — perfect for gifting during Diwali.",
+    "rating": 5,
+    "order": 6
+  }
+},
+{
+  "model": "social.social",
+  "pk": 1,
+  "fields": {
+    "eyebrow_text": "Stay Connected",
+    "heading": "Follow the SJR Groups journey.",
+    "description": "Official social channels will be connected here once supplied by the SJR Groups team.",
+    "updated_at": "2026-09-23T05:41:15.047Z"
+  }
+},
+{
+  "model": "social.sociallink",
+  "pk": 1,
+  "fields": {
+    "social": 1,
+    "platform": "Facebook",
+    "url": "https://www.facebook.com/share/19aKia55hb/",
+    "order": 1
+  }
+},
+{
+  "model": "social.sociallink",
+  "pk": 2,
+  "fields": {
+    "social": 1,
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/sjrgroups_kovilpatti?stkn=MWx3bWxuenF5bHZpdA==",
+    "order": 2
+  }
+},
+{
+  "model": "social.sociallink",
+  "pk": 3,
+  "fields": {
+    "social": 1,
+    "platform": "YouTube",
+    "url": "https://youtube.com/@book-king?si=Eeg7vgw_0Bba-q3g",
+    "order": 3
+  }
+},
+{
+  "model": "social.socialfeaturedcard",
+  "pk": 1,
+  "fields": {
+    "social": 1,
+    "thumbnail": "social/stayconnected-1.jpg",
+    "label": "Fashion Shelter",
+    "link": "",
+    "order": 1
+  }
+},
+{
+  "model": "social.socialfeaturedcard",
+  "pk": 2,
+  "fields": {
+    "social": 1,
+    "thumbnail": "social/stayconnected-2.jpg",
+    "label": "Sirippu Mittai",
+    "link": "",
+    "order": 2
+  }
+},
+{
+  "model": "social.socialfeaturedcard",
+  "pk": 3,
+  "fields": {
+    "social": 1,
+    "thumbnail": "social/stayconnected-3.jpg",
+    "label": "Om Muruga Ground",
+    "link": "",
+    "order": 3
+  }
+},
+{
+  "model": "social.socialfeaturedcard",
+  "pk": 4,
+  "fields": {
+    "social": 1,
+    "thumbnail": "social/stayconnected-4.jpg",
+    "label": "Mano Innovation",
+    "link": "",
+    "order": 4
+  }
+},
+{
+  "model": "standard.standard",
+  "pk": 1,
+  "fields": {
+    "eyebrow_text": "The SJR Standard",
+    "heading": "More than businesses. A growing family.",
+    "updated_at": "2026-09-23T02:44:25.212Z"
+  }
+},
+{
+  "model": "standard.standarditem",
+  "pk": 1,
+  "fields": {
+    "standard": 1,
+    "title": "Quality",
+    "description": "Committed to delivering value.",
+    "order": 1
+  }
+},
+{
+  "model": "standard.standarditem",
+  "pk": 2,
+  "fields": {
+    "standard": 1,
+    "title": "Trust",
+    "description": "Building meaningful relationships.",
+    "order": 2
+  }
+},
+{
+  "model": "standard.standarditem",
+  "pk": 3,
+  "fields": {
+    "standard": 1,
+    "title": "Customer experience",
+    "description": "Creating experiences people remember.",
+    "order": 3
+  }
+},
+{
+  "model": "standard.standarditem",
+  "pk": 4,
+  "fields": {
+    "standard": 1,
+    "title": "Continuous growth",
+    "description": "Growing businesses with purpose.",
+    "order": 4
+  }
+},
+{
+  "model": "videos.videos",
+  "pk": 1,
+  "fields": {
+    "eyebrow_text": "SJR Stories",
+    "heading": "See SJR Groups in motion.",
+    "updated_at": "2026-09-23T06:32:35.209Z"
+  }
+},
+{
+  "model": "videos.videoitem",
+  "pk": 1,
+  "fields": {
+    "videos": 1,
+    "thumbnail": "videos/stayconnected-2.jpg",
+    "label": "Our Story",
+    "title": "The world of SJR Groups",
+    "video_file": "videos/files/WhatsApp_Video_2026-09-23_at_10_etROiXS.35.48_AM.mp4",
+    "video_url": "",
+    "is_featured": true,
+    "order": 1
+  }
+},
+{
+  "model": "videos.videoitem",
+  "pk": 2,
+  "fields": {
+    "videos": 1,
+    "thumbnail": "videos/stayconnected-1.jpg",
+    "label": "Fashion Shelter",
+    "title": "Details that define an occasion",
+    "video_file": "videos/files/WhatsApp_Video_2026-09-23_at_10.36.00_AM.mp4",
+    "video_url": "",
+    "is_featured": false,
+    "order": 2
+  }
+},
+{
+  "model": "videos.videoitem",
+  "pk": 3,
+  "fields": {
+    "videos": 1,
+    "thumbnail": "videos/stayconnected-2_iu39hl3.jpg",
+    "label": "Sirippu Mittai",
+    "title": "Flavours that bring joy",
+    "video_file": "videos/files/WhatsApp_Video_2026-09-23_at_10_HRNB4s6.35.48_AM.mp4",
+    "video_url": "",
+    "is_featured": false,
+    "order": 3
+  }
+},
+{
+  "model": "videos.videoitem",
+  "pk": 4,
+  "fields": {
+    "videos": 1,
+    "thumbnail": "videos/stayconnected-3.jpg",
+    "label": "Om Muruga Ground",
+    "title": "A space made for movement",
+    "video_file": "videos/files/WhatsApp_Video_2026-09-23_at_10.36.12_AM.mp4",
+    "video_url": "",
+    "is_featured": false,
+    "order": 4
+  }
+},
+{
+  "model": "videos.videoitem",
+  "pk": 5,
+  "fields": {
+    "videos": 1,
+    "thumbnail": "videos/stayconnected-4.jpg",
+    "label": "Mano Innovation Club",
+    "title": "Inspiring young minds & future innovators",
+    "video_file": "videos/files/WhatsApp_Video_2026-09-23_at_10_StRqOBx.36.12_AM.mp4",
+    "video_url": "",
+    "is_featured": false,
+    "order": 5
+  }
+},
+{
+  "model": "vision_mission.visionmissioncard",
+  "pk": 1,
+  "fields": {
+    "label": "Our Vision",
+    "description": "To build trusted and memorable businesses that grow with the people we serve.",
+    "order": 1
+  }
+},
+{
+  "model": "vision_mission.visionmissioncard",
+  "pk": 2,
+  "fields": {
+    "label": "Our Mission",
+    "description": "To deliver quality products, engaging experiences and spaces that bring people together.",
+    "order": 2
+  }
+}
+]

@@ -1,0 +1,29 @@
+<section class="hero" id="home">
+    <div class="hero__slides">
+        {% for slide in hero.slides.all %}
+            <div class="hero__slide{% if forloop.first %} is-active{% endif %}" style="background-image: url('{{ slide.image.url }}');"></div>
+        {% endfor %}
+    </div>
+    <div class="hero__overlay"></div>
+
+    <div class="container hero__content">
+        {% if hero.badge_text %}
+            <span class="hero__badge"><span class="hero__badge-dot"></span>{{ hero.badge_text }}</span>
+        {% endif %}
+
+        <h1 class="hero__heading">{{ hero.heading|linebreaksbr }}</h1>
+
+        {% if hero.description %}
+            <p class="hero__description">{{ hero.description }}</p>
+        {% endif %}
+
+        <div class="hero__actions">
+            {% if hero.primary_cta_text %}
+                <a href="{{ hero.primary_cta_link }}" class="btn btn-outline-light">{{ hero.primary_cta_text }}</a>
+            {% endif %}
+            {% if hero.secondary_cta_text %}
+                <a href="{{ hero.secondary_cta_link }}" class="btn btn-gold">{{ hero.secondary_cta_text }}&nbsp;&rarr;</a>
+            {% endif %}
+        </div>
+    </div>
+</section>

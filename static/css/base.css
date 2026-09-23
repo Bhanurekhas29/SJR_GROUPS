@@ -1,0 +1,147 @@
+/* ==========================================================================
+   SJR Groups — design tokens
+   Placeholder palette inferred from design screenshots. Swap these values
+   once the team lead sends official brand color codes — nothing else
+   should need to change.
+   ========================================================================== */
+:root {
+    /* Colors — official brand codes from team lead */
+    --color-navy: #0B1329;
+    --color-navy-soft: #141b2e;
+    --color-gold: #CBA358E5;
+    --color-gold-light: #ddbe85;
+    --color-cream: #f7f3ec;
+    --color-white: #ffffff;
+    --color-text: #1a1f2e;
+    --color-text-muted: #6b7280;
+    --color-text-on-dark: #f5f2ea;
+    --color-text-on-dark-muted: #a9adba;
+    --color-border: #e5e0d6;
+
+    /* Typography — official fonts from team lead */
+    --font-base: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+
+    /* Layout */
+    --container-max: 1400px;
+    --container-padding: 24px;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-pill: 999px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-base);
+    color: var(--color-text);
+    background: var(--color-white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: var(--radius-pill);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border: none;
+    white-space: nowrap;
+}
+
+.btn-gold {
+    background: var(--color-gold);
+    color: var(--color-navy);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+}
+
+.eyebrow::after {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--color-gold);
+}
+
+/* Light scroll-reveal, applied via scroll-reveal.js */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

@@ -1,0 +1,127 @@
+.social {
+    padding: 80px 0;
+    background: var(--color-cream);
+}
+
+.social__inner {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.social__heading {
+    font-size: clamp(26px, 3vw, 34px);
+    font-weight: 700;
+    color: var(--color-text);
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+.social__desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    margin-bottom: 24px;
+}
+
+.social__icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: var(--color-gold);
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+.social-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.social-icon--facebook {
+    background: #1877f2;
+}
+
+.social-icon--instagram {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+
+.social-icon--youtube {
+    background: #ff0000;
+}
+
+.social__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.social-card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 160px;
+    border-radius: var(--radius-md);
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-navy);
+    overflow: hidden;
+    padding: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 30px -18px rgba(13, 19, 33, 0.4);
+}
+
+.social-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(13, 19, 33, 0) 40%, rgba(13, 19, 33, 0.85) 100%);
+}
+
+.social-card__label {
+    position: relative;
+    z-index: 1;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+@media (max-width: 960px) {
+    .social__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .social__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .social {
+        padding: 56px 0;
+    }
+
+    .social__cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}

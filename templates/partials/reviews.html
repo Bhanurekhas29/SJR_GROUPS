@@ -1,0 +1,32 @@
+{% if reviews_section %}
+<section class="reviews" id="reviews">
+    <div class="container reviews__inner">
+        <span class="eyebrow reviews__eyebrow">{{ reviews_section.eyebrow_text }}</span>
+        <h2 class="reviews__heading">{{ reviews_section.heading }}</h2>
+
+        {% if reviews_section.items.all %}
+            <div class="reviews__carousel">
+                {% for review in reviews_section.items.all %}
+                    <div class="review-slide{% if forloop.first %} is-active{% endif %}">
+                        <div class="review-slide__stars">
+                            {% for i in '12345' %}
+                                <span class="star{% if forloop.counter <= review.rating %} is-filled{% endif %}">&#9733;</span>
+                            {% endfor %}
+                        </div>
+                        <p class="review-slide__quote">&ldquo;{{ review.quote }}&rdquo;</p>
+                        <p class="review-slide__name">{{ review.customer_name }}</p>
+                        {% if review.business_location %}
+                            <p class="review-slide__meta">{{ review.business_location }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="reviews__nav">
+                <button type="button" class="reviews__arrow" data-dir="prev" aria-label="Previous review">&#8592;</button>
+                <button type="button" class="reviews__arrow" data-dir="next" aria-label="Next review">&#8594;</button>
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}

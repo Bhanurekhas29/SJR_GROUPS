@@ -1,0 +1,52 @@
+{% if videos_section %}
+<section class="videos" id="videos">
+    <div class="container">
+        <span class="eyebrow">{{ videos_section.eyebrow_text }}</span>
+        <h2 class="videos__heading">{{ videos_section.heading }}</h2>
+
+        <div class="videos__grid">
+            {% if featured_video %}
+                <a
+                    href="{{ featured_video.video_url|default:'#' }}"
+                    class="video-featured"
+                    style="background-image: url('{{ featured_video.thumbnail.url }}');"
+                    {% if featured_video.video_file %}data-video-src="{{ featured_video.video_file.url }}"{% else %}target="_blank" rel="noopener"{% endif %}
+                >
+                    <span class="video-featured__play">&#9654;</span>
+                    <span class="video-featured__caption">
+                        <span class="video-featured__label">{{ featured_video.label }}</span>
+                        <span class="video-featured__title">{{ featured_video.title }}</span>
+                    </span>
+                </a>
+            {% endif %}
+
+            {% if other_videos %}
+                <div class="video-list">
+                    {% for item in other_videos %}
+                        <a
+                            href="{{ item.video_url|default:'#' }}"
+                            class="video-list__item"
+                            {% if item.video_file %}data-video-src="{{ item.video_file.url }}"{% else %}target="_blank" rel="noopener"{% endif %}
+                        >
+                            <span class="video-list__thumb" style="background-image: url('{{ item.thumbnail.url }}');"></span>
+                            <span class="video-list__play">&#9654;</span>
+                            <span class="video-list__text">
+                                <span class="video-list__label">{{ item.label }}</span>
+                                <span class="video-list__title">{{ item.title }}</span>
+                            </span>
+                        </a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="video-modal" id="video-modal">
+        <div class="video-modal__backdrop"></div>
+        <div class="video-modal__box">
+            <button type="button" class="video-modal__close" aria-label="Close video">&times;</button>
+            <video class="video-modal__player" controls playsinline></video>
+        </div>
+    </div>
+</section>
+{% endif %}

@@ -1,0 +1,85 @@
+{% if contact %}
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact__card">
+            <div class="contact__info">
+                <span class="eyebrow contact__eyebrow">{{ contact.eyebrow_text }}</span>
+                <h2 class="contact__heading">{{ contact.heading }}</h2>
+                {% if contact.description %}
+                    <p class="contact__desc">{{ contact.description }}</p>
+                {% endif %}
+
+                {% if contact.methods.all %}
+                    <div class="contact__methods">
+                        {% for method in contact.methods.all %}
+                            <div class="contact-method">
+                                <span class="contact-method__icon contact-method__icon--{{ method.label|slugify }}"></span>
+                                <div>
+                                    <span class="contact-method__label">{{ method.label }}</span>
+                                    <span class="contact-method__value">{{ method.value }}</span>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <div class="contact__map">
+                    {% if contact.map_embed_url %}
+                        <iframe src="{{ contact.map_embed_url }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    {% else %}
+                        <div class="contact__map-placeholder">
+                            <span>SJR GROUPS</span>
+                            {% if contact.location_label %}
+                                <span class="contact__map-tag">{{ contact.location_label }}</span>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </div>
+                {% if contact.map_link %}
+                    <a href="{{ contact.map_link }}" target="_blank" rel="noopener" class="btn btn-gold contact__map-btn">View on Google Maps &rarr;</a>
+                {% endif %}
+            </div>
+
+            <div class="contact__form-wrap">
+                <form id="enquiry-form" class="contact__form">
+                    <label class="contact__field">
+                        <span>Name</span>
+                        <input type="text" name="name" placeholder="Your name" required>
+                    </label>
+
+                    <div class="contact__row">
+                        <label class="contact__field">
+                            <span>Phone Number</span>
+                            <input type="tel" name="phone" placeholder="Your number" inputmode="numeric" pattern="[0-9]*" maxlength="15">
+                        </label>
+                        <label class="contact__field">
+                            <span>Email</span>
+                            <input type="email" name="email" placeholder="you@example.com">
+                        </label>
+                    </div>
+
+                    <label class="contact__field">
+                        <span>Select Business</span>
+                        <select name="business">
+                            <option value="">Choose a business</option>
+                            {% for name in business_names %}
+                                <option value="{{ name }}">{{ name }}</option>
+                            {% endfor %}
+                        </select>
+                    </label>
+
+                    <label class="contact__field">
+                        <span>Message</span>
+                        <textarea name="message" rows="5" placeholder="How can we help?"></textarea>
+                    </label>
+
+                    <div class="contact__submit-wrap">
+                        <button type="submit" class="btn btn-gold contact__submit">Send Enquiry &rarr;</button>
+                        <p class="contact__form-status" role="status"></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

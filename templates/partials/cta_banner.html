@@ -1,0 +1,13 @@
+{% if cta_banner %}
+<section class="cta-banner">
+    <div class="container cta-banner__inner">
+        {% if cta_banner.eyebrow_text %}
+            <span class="cta-banner__eyebrow">{{ cta_banner.eyebrow_text }}</span>
+        {% endif %}
+        <h2 class="cta-banner__heading">{{ cta_banner.heading }}</h2>
+        {% if cta_banner.cta_text %}
+            <a href="{{ cta_banner.cta_link|default:'#' }}" class="btn btn-gold">{{ cta_banner.cta_text }}&nbsp;&rarr;</a>
+        {% endif %}
+    </div>
+</section>
+{% endif %}

@@ -1,0 +1,38 @@
+{% if business %}
+<section class="businesses" id="businesses">
+    <div class="container">
+        <span class="eyebrow">{{ business.eyebrow_text }}</span>
+        <h2 class="businesses__heading">{{ business.heading }}</h2>
+
+        <div class="businesses__list">
+            {% for item in business.items.all %}
+                <div class="business-item{% if forloop.counter|divisibleby:2 %} business-item--reverse{% endif %}">
+                    <div class="business-item__media">
+                        <img src="{{ item.image.url }}" alt="{{ item.title }}">
+                    </div>
+                    <div class="business-item__content">
+                        <span class="business-item__number">{{ forloop.counter|stringformat:'02d' }}</span>
+                        <h3 class="business-item__title"{% if item.accent_color %} style="color: {{ item.accent_color }};"{% endif %}>{{ item.title }}</h3>
+                        {% if item.tagline %}
+                            <p class="business-item__tagline">{{ item.tagline }}</p>
+                        {% endif %}
+                        {% if item.description %}
+                            <p class="business-item__desc">{{ item.description }}</p>
+                        {% endif %}
+                        {% if item.feature_list %}
+                            <ul class="business-item__features">
+                                {% for feature in item.feature_list %}
+                                    <li>{{ feature }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        {% if item.cta_text %}
+                            <a href="{{ item.cta_link|default:'#' }}" class="btn business-item__cta">{{ item.cta_text }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

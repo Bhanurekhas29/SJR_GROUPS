@@ -1,0 +1,32 @@
+{% load text_extras %}
+{% if social %}
+<section class="social">
+    <div class="container social__inner">
+        <div class="social__content">
+            <span class="eyebrow">{{ social.eyebrow_text }}</span>
+            <h2 class="social__heading">{{ social.heading }}</h2>
+            {% if social.description %}
+                <p class="social__desc">{{ social.description }}</p>
+            {% endif %}
+
+            {% if social.links.all %}
+                <div class="social__icons">
+                    {% for link in social.links.all %}
+                        <a href="{{ link.url|default:'#' }}" class="social-icon social-icon--{{ link.platform|slugify }}" aria-label="{{ link.platform }}">{{ link.platform|social_icon }}</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        {% if social.featured_cards.all %}
+            <div class="social__cards">
+                {% for card in social.featured_cards.all %}
+                    <a href="{{ card.link|default:'#' }}" class="social-card" style="background-image: url('{{ card.thumbnail.url }}');">
+                        <span class="social-card__label">{{ card.label }}</span>
+                    </a>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}

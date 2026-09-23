@@ -1,0 +1,29 @@
+<section class="about" id="about">
+    <div class="container">
+        <div class="about__intro">
+            <div class="about__intro-left">
+                <span class="eyebrow">{{ about.eyebrow_text }}</span>
+                <h2 class="about__heading">{{ about.heading|linebreaksbr }}</h2>
+            </div>
+            <div class="about__intro-right">
+                {% if about.description_primary %}
+                    <p class="about__desc-primary">{{ about.description_primary }}</p>
+                {% endif %}
+                {% if about.description_secondary %}
+                    <p class="about__desc-secondary">{{ about.description_secondary }}</p>
+                {% endif %}
+            </div>
+        </div>
+
+        {% if about.stats.all %}
+            <div class="about__stats">
+                {% for stat in about.stats.all %}
+                    <div class="about__stat{% if forloop.first %} is-active{% endif %}">
+                        <span class="about__stat-number">{{ forloop.counter|stringformat:'02d' }}</span>
+                        <span class="about__stat-label">{{ stat.label }}</span>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</section>

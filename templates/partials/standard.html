@@ -1,0 +1,22 @@
+{% if standard %}
+<section class="standard">
+    <div class="container">
+        <span class="eyebrow">{{ standard.eyebrow_text }}</span>
+        <h2 class="standard__heading">{{ standard.heading }}</h2>
+
+        {% if standard.items.all %}
+            <div class="standard__grid">
+                {% for item in standard.items.all %}
+                    <div class="standard__item">
+                        <span class="standard__number">{{ forloop.counter|stringformat:'02d' }}</span>
+                        <h3 class="standard__title">{{ item.title }}</h3>
+                        {% if item.description %}
+                            <p class="standard__desc">{{ item.description }}</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}

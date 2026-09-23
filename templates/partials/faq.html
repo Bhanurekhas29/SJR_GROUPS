@@ -1,0 +1,24 @@
+{% if faq %}
+<section class="faq" id="faq">
+    <div class="container">
+        <span class="eyebrow">{{ faq.eyebrow_text }}</span>
+        <h2 class="faq__heading">{{ faq.heading }}</h2>
+
+        {% if faq.items.all %}
+            <div class="faq__list">
+                {% for item in faq.items.all %}
+                    <div class="faq-item{% if forloop.first %} is-open{% endif %}">
+                        <button type="button" class="faq-item__question">
+                            <span>{{ item.question }}</span>
+                            <span class="faq-item__icon">&#9660;</span>
+                        </button>
+                        <div class="faq-item__answer">
+                            <p>{{ item.answer }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}

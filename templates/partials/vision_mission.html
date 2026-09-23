@@ -1,0 +1,16 @@
+{% load text_extras %}
+{% if vision_mission_cards %}
+<section class="vm">
+    <div class="container">
+        <div class="vm__grid">
+            {% for card in vision_mission_cards %}
+                <div class="vm__card {% cycle 'vm__card--light' 'vm__card--dark' %}">
+                    <span class="vm__badge"><span class="vm__dot"></span>{{ card.label|upper }}</span>
+                    <p class="vm__desc">{{ card.description }}</p>
+                    <span class="vm__watermark">{{ card.label|last_word_initial }}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

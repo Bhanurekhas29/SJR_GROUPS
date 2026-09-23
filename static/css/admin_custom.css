@@ -1,0 +1,17 @@
+/* Each landing-page section is its own single-model app, so the auto
+   app-name group header above each sidebar link is redundant. Hide all
+   of them, except we keep exactly ONE as a plain divider line right
+   after Groups/Users, marking where the content-section menus start. */
+#jazzy-navigation > li.nav-header {
+    display: none;
+}
+
+#jazzy-navigation > li.nav-header:nth-of-type(5) {
+    display: block;
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    margin: 10px 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}

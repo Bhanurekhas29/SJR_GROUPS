@@ -1,0 +1,141 @@
+.site-header {
+    background: var(--color-navy);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-header__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.site-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.site-header__logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.site-header__logo-lockup {
+    height: 62px;
+    width: auto;
+}
+
+.site-header__logo-fallback {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-gold);
+    border: 1px solid var(--color-gold);
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-header__divider {
+    width: 1px;
+    height: 28px;
+    background: rgba(245, 242, 234, 0.25);
+}
+
+.site-header__brand-name {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--color-white);
+}
+
+.site-header__tagline {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-gold-light);
+    margin-top: 2px;
+}
+
+.site-header__nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: nowrap;
+}
+
+.site-header__nav a {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text-on-dark-muted);
+    transition: color 0.15s ease;
+}
+
+.site-header__nav a:hover,
+.site-header__nav a.is-active {
+    color: var(--color-gold);
+}
+
+.site-header__cta {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.site-header__toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    padding: 8px;
+}
+
+.site-header__toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--color-white);
+    margin: 4px 0;
+}
+
+@media (max-width: 1200px) {
+    .site-header__nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-navy-soft);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 16px var(--container-padding) 24px;
+        display: none;
+    }
+
+    .site-header__nav.is-open {
+        display: flex;
+    }
+
+    .site-header__nav a {
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .site-header__cta {
+        display: none;
+    }
+
+    .site-header__toggle {
+        display: block;
+    }
+}

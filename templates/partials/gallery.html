@@ -1,0 +1,29 @@
+{% if gallery %}
+<section class="gallery" id="gallery">
+    <div class="container">
+        <div class="gallery__header">
+            <div>
+                <span class="eyebrow">{{ gallery.eyebrow_text }}</span>
+                <h2 class="gallery__heading">{{ gallery.heading }}</h2>
+            </div>
+
+            {% if gallery_categories %}
+                <div class="gallery__filters">
+                    <button type="button" class="gallery__filter is-active" data-filter="all">All</button>
+                    {% for category in gallery_categories %}
+                        <button type="button" class="gallery__filter" data-filter="{{ category }}">{{ category }}</button>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="gallery__grid">
+            {% for image in gallery.images.all %}
+                <div class="gallery__item" data-category="{{ image.category }}">
+                    <img src="{{ image.image.url }}" alt="{{ image.category }}">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

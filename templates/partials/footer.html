@@ -1,0 +1,75 @@
+{% load text_extras %}
+{% if footer %}
+<footer class="site-footer">
+    <div class="container site-footer__grid">
+        <div class="site-footer__brand">
+            <div class="site-footer__logo-row">
+                {% if footer.logo %}
+                    <img src="{{ footer.logo.url }}" alt="{{ footer.brand_name }}" class="site-footer__logo-lockup">
+                {% else %}
+                    <span class="site-footer__logo-fallback">SJR</span>
+                    <span class="site-footer__divider"></span>
+                    <span>
+                        <span class="site-footer__brand-name">{{ footer.brand_name }}</span>
+                        {% if footer.tagline %}
+                            <span class="site-footer__tagline">{{ footer.tagline }}</span>
+                        {% endif %}
+                    </span>
+                {% endif %}
+            </div>
+
+            {% if footer.description %}
+                <p class="site-footer__desc">{{ footer.description }}</p>
+            {% endif %}
+
+            {% if footer.social_links.all %}
+                <div class="site-footer__socials">
+                    {% for link in footer.social_links.all %}
+                        <a href="{{ link.url|default:'#' }}" class="social-icon social-icon--{{ link.platform|slugify }}" aria-label="{{ link.platform }}">{{ link.platform|social_icon }}</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+
+        {% if footer_quick_links %}
+            <div class="site-footer__col">
+                <span class="site-footer__col-title">Quick Links</span>
+                <ul>
+                    {% for link in footer_quick_links %}
+                        <li><a href="{{ link.url|default:'#' }}">{{ link.label }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        {% if footer_business_links %}
+            <div class="site-footer__col">
+                <span class="site-footer__col-title">Our Businesses</span>
+                <ul>
+                    {% for link in footer_business_links %}
+                        <li><a href="{{ link.url|default:'#' }}">{{ link.label }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        <div class="site-footer__col">
+            <span class="site-footer__col-title">Connect</span>
+            {% if footer.phone %}
+                <p class="site-footer__connect-line"><strong>Phone</strong> &mdash; {{ footer.phone }}</p>
+            {% endif %}
+            {% if footer.email %}
+                <p class="site-footer__connect-block"><strong>Email</strong>{{ footer.email }}</p>
+            {% endif %}
+            {% if footer.location %}
+                <p class="site-footer__connect-block"><strong>Location</strong>{{ footer.location|linebreaksbr }}</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="container site-footer__bottom">
+        <span>{{ footer.copyright_text }}</span>
+        <a href="#" class="site-footer__top">Back to top &uarr;</a>
+    </div>
+</footer>
+{% endif %}
